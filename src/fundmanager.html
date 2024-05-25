@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fund Manager Dashboard</title>
+    <link rel= "stylesheet" href="style2.css">
+</head>
+<body>
+    
+    <header>
+        <header> 
+            
+            <h1>Fund Manager Dashboard</h1>
+        </header>
+        
+    </header>
+
+    
+    <section id="manage-funding">
+        <h2>Manage Funding Opportunities</h2>
+        <button onclick="showForm()">Add New Funding Opportunity</button>
+        <div id="funding-opportunities">
+            
+        </div>
+    </section>
+
+    
+    <section id="review-applications">
+        <button onclick="change()">Review Applications</button>
+        <div id="applications-list">
+            
+        </div>
+    </section>
+
+    
+    <section id="budget-reports">
+        <h2>Manage Funds</h2>
+        <div id="budget-overview">
+            
+        </div>
+        <button onclick="managefunds()">Manage Funds</button>
+    </section>
+
+    
+    <footer>
+        <p>Contact us at kmabasa212@gmail.com.</p>
+    </footer>
+
+    
+    <script>
+        function showForm() {
+            window.location.href = 'https://kmabasa212.github.io/sprint/src/infoFunding.html';
+        }
+
+        function managefunds() {
+            window.location.href = 'https://kmabasa212.github.io/sprint/src/updateFunds.html';
+        }
+        function change(){
+            window.location.href = 'https://kmabasa212.github.io/sprint/src/App-Manage-Page.html';
+        }
+    </script>
+</body>
+</html>

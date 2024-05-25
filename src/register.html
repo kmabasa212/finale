@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up for all users</title>
+    <script src="register.js" defer type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+        }
+
+        header, main, footer {
+            width: 100%; 
+            max-width: 600px; 
+        }
+
+        header {
+            background: red;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        h1 {
+            text-align: center; 
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin: 20px 0; 
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            padding: 0 10px;
+            color: red;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #495057;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea,
+        input[type="checkbox"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+        }
+
+        button {
+            display: block;
+            width: auto;
+            padding: 10px 20px;
+            margin: 0 auto;
+            border: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: darkred;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #343a40;
+            color: #ffffff;
+            width: 100%; 
+            max-width: 600px; 
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sign Up Page</h1>
+    </header>
+    <main>
+        <form novalidate>
+            <fieldset>
+                <legend>Your Information</legend>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" autocomplete="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+
+                <label for="ID">Id:</label>
+                <input type="text" id="ID" name="ID" required>
+
+                <label for="reason">Reason:</label>
+                <input type="text" id="Reason" name="Reason" required>
+
+                <label for="Type">Type:</label>
+                <select id="Type" name="Type" required>
+                    <option value="Admin">Admin</option>
+                    <option value="Fund-Manager">Fund-Manager</option>
+                    <option value="Applicant">Applicant</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Information</legend>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+
+                <label for="Province">Province:</label>
+                <select id="Province" name="Province">
+                    <option value="Gauteng">Gauteng</option>
+                    <option value="Western-Cape">Western Cape</option>
+                    <option value="Limpopo">Limpopo</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="Gender">Gender:</label>
+                <select id="Gender" name="Gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="Employed">Employed:</label>
+                <select id="Employed" name="Employed">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+
+                <label for="ConfirmEmail">Confirmation Email:</label>
+                <input type="checkbox" id="ConfirmEmail" name="ConfirmEmail">
+            </fieldset>
+            <button type="button" id="btn-submit-signup" onclick="myFunction()">Sign Up</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Sign Up For Funding</p>
+    </footer>
+
+    <script>
+        function myFunction() {
+            // Your form submission logic here
+        }
+    </script>
+</body>
+</html>

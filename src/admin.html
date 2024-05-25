@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Admin Dashboard</h1>
+        <link rel= "stylesheet" href="style2.css">
+    </header>
+
+    
+    <section id="user-management">
+        <h2>User Management</h2>
+        <form action="/add-user" method="post">
+            <label for="userName">User Name: </label>
+            <input type="text" id="userName" name="userName" required>
+            <br>
+            <label for="userRole">User Role:</label>
+            <select id="userRole" name="userRole">
+                <option value="applicant">Applicant</option>
+                <option value="fundManager">Fund Manager</option>
+                <option value="admin">Admin</option>
+            </select>
+            <br>
+            <button type="submit">Add User</button>
+        </form>
+        <div id="user-list">
+            
+        </div>
+    </section>
+
+    
+    <section id="system-settings">
+        <h2>System Settings</h2>
+        <form action="/update-settings" method="post">
+            <label for="settingType">Select Setting Type:</label>
+            <select id="settingType" name="settingType">
+                <option value="notification">Notification Preferences</option>
+                <option value="privacy">Privacy Settings</option>
+                <option value="security">Security Protocols</option>
+            </select>
+            <br>
+            <input type="checkbox" id="enableFeature" name="enableFeature">
+            <label for="enableFeature">Enable Feature</label>
+            <br>
+            <button onclick="updateSettings()">Update Settings</button>
+        </form>
+    </section>
+
+    
+    <section id="reports-analytics">
+        <h2>Reports and Analytics</h2>
+        <form action="/generate-report" method="post">
+            <label for="reportType">Report Type:</label>
+            <select id="reportType" name="reportType">
+                <option value="userActivity">User Activity</option>
+                <option value="financial">Financial Overview</option>
+                <option value="systemUsage">System Usage</option>
+            </select>
+            <button type="submit">Generate Report</button>
+        </form>
+        <div id="reports-display">
+            
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>Contact us for support at kmabasa212@gmail.com.</p>
+    </footer>
+
+    
+    <script>
+        function updateSettings() {
+            
+        }
+
+        function generateReport() {
+            
+        }
+    </script>
+</body>
+</html>
