@@ -12,7 +12,7 @@ const user = auth.currentUser;
 
 btn_register.addEventListener('click',()=>{
     //After pressing the register button, user is sent to register page
-    window.location.href = 'https://victorious-pond-068eb9b03.5.azurestaticapps.net/register.html';
+    window.location.href = 'https://mango-rock-04251f303.5.azurestaticapps.net/register.html';
 });
 
 btn_login.addEventListener('click',()=>{
