@@ -4,19 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Applicant Dashboard</title>
-    <script src="./applicant.js" defer type="module"></script>
-    <link rel= "stylesheet" href="./applicant.css">
+    <link rel= "stylesheet" href="style.css">
 </head>
 <body>
     
     <header>
-        <h1>Welcome to the Applicant Dashboard</h1>
-        <button id="fixedButton">Sign out</button>
+        <h1>Dashboard</h1>
     </header>
 
     
     <section id="funding-opportunities">
-        <h2>Available Funding Opportunities</h2>
+        <h2>Current Funding Opportunities</h2>
         <div id="opportunities-list">
             
         </div>
@@ -25,25 +23,32 @@
     
     <section id="submit-application">
         <h2>Submit a New Application</h2>
-        <form action="" method="post" enctype="multipart/form-data">
-            <label for="fundingId">Select Funding Opportunity:</label>
+        <form action="/submit-application" method="post" enctype="multipart/form-data">
+            <label for="fundingId">Funding Opportunities📃:</label>
             <select name="fundingId" id="fundingId">
                 
             </select>
             <br>
-            <label for="applicationDetails">Application Details:</label>
-            <textarea id="applicationDetails" name="applicationDetails" required></textarea>
-            <br>
-            <label for="supportingDocuments">Supporting Documents:</label>
+            <label for="supportingDocuments">certified copy of ID:</label>
             <input type="file" id="supportingDocuments" name="supportingDocuments" multiple required>
             <br>
-            <button type="button" id="submit-btn">Submit Application</button>
+            <label for="supportingDocuments">Academic Transcript:</label>
+            <input type="file" id="supportingDocuments" name="supportingDocuments" multiple required>
+            <br>
+            <label for="supportingDocuments">Letter of motivation:</label>
+            <input type="file" id="supportingDocuments" name="supportingDocuments" multiple required>
+            <br>
+            <label for="applicationDetails">Details of application:</label>
+            <textarea id="applicationDetails" name="applicationDetails" required></textarea>
+            <br>
+            
+            <button type="submit">Submit👌</button>
         </form>
     </section>
 
     
     <section id="application-status">
-        <h2>Your Application Status</h2>
+        <h2>Status 👩‍💻</h2>
         <div id="status-list">
             
         </div>
@@ -51,7 +56,7 @@
 
     
     <footer>
-        <p>Contact us at <a href="mailto:support@fundingplatform.com">support@fundingplatform.com</a>.</p>
-    </footer>
+        &copy; 2024 Funding requests management 
+       </footer>
 </body>
 </html>

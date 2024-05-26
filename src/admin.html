@@ -8,8 +8,8 @@
 <body>
     
     <header>
-        <h1>Admin Dashboard</h1>
-        <link rel= "stylesheet" href="style2.css">
+        <h1>Dashboard</h1>
+        <link rel= "stylesheet" href="style.css">
     </header>
 
     
@@ -23,7 +23,7 @@
             <select id="userRole" name="userRole">
                 <option value="applicant">Applicant</option>
                 <option value="fundManager">Fund Manager</option>
-                <option value="admin">Admin</option>
+                <option value="admin">Platform Admin</option>
             </select>
             <br>
             <button type="submit">Add User</button>
@@ -40,26 +40,28 @@
             <label for="settingType">Select Setting Type:</label>
             <select id="settingType" name="settingType">
                 <option value="notification">Notification Preferences</option>
-                <option value="privacy">Privacy Settings</option>
                 <option value="security">Security Protocols</option>
+                <option value="privacy">Privacy Settings</option>
+              
             </select>
             <br>
             <input type="checkbox" id="enableFeature" name="enableFeature">
-            <label for="enableFeature">Enable Feature</label>
+            <label for="enableFeature">Activate Feature</label>
             <br>
-            <button onclick="updateSettings()">Update Settings</button>
+            <button onclick="updateSettings()">Updating settings</button>
         </form>
     </section>
 
     
     <section id="reports-analytics">
-        <h2>Reports and Analytics</h2>
+        <h2>Reports/Analytics</h2>
         <form action="/generate-report" method="post">
             <label for="reportType">Report Type:</label>
             <select id="reportType" name="reportType">
-                <option value="userActivity">User Activity</option>
-                <option value="financial">Financial Overview</option>
+                <option value="userActivity">User Activities</option>
                 <option value="systemUsage">System Usage</option>
+                <option value="financial">Financial Check</option>
+                
             </select>
             <button type="submit">Generate Report</button>
         </form>
@@ -70,7 +72,7 @@
 
     
     <footer>
-        <p>Contact us for support at kmabasa212@gmail.com.</p>
+        &copy; 2024 Funding requests management
     </footer>
 
     

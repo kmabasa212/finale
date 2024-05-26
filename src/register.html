@@ -4,38 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up for all users</title>
-    <script src="./scripts/register.js" defer type="module"></script>
-     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" ></script>
+    <style>
+        /* CSS styles */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: red; /* Update background color */
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+        }
+
+        header {
+            padding: 20px;
+            background-color: red; /* Update header background color */
+            color: white;
+        }
+
+        main {
+            padding: 40px 0;
+        }
+
+        form {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            border: 1px solid orange; /* Update fieldset border color */
+            padding: 10px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: orange; /* Update legend text color */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: orange; /* Update label text color */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid orange; /* Update input border color */
+            border-radius: 5px;
+        }
+
+        select {
+            padding: 10px 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: orange; /* Update button background color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkorange; /* Update button hover color */
+        }
+
+        footer {
+            padding: 10px;
+            text-align: center;
+            background-color: red; /* Update footer background color */
+            color: orange; /* Update footer text color */
+            font-weight: 300;
+        }
+    </style>
+    <script src="register.js" defer type="module"></script>
 </head>
 <body>
 
 <header>
-    <h1>Sign Up Page</h1>
+    <h1>Register Page</h1>
 </header>
 
 <main>
-    <form >
+    <form>
         <fieldset>
-            <legend>Your Information</legend>
-            <label for="fullname">Full Name:</label><br>
+            <legend>Personal Information</legend>
+            <label for="fullname">Full Names:</label><br>
             <input type="text" id="fullname" name="fullname" required><br>
 
-            <label for="email">Email:</label><br>
+            <label for="email">Email address:</label><br>
             <input type="email" id="email" name="email" required><br>
 
-            <label for="ID">Id:</label><br>
+            <label for="ID">ID or Passport:</label><br>
             <input type="text" id="ID" name="ID" required><br>
 
-            <label for="reason">Reason:</label><br>
+            <label for="reason">Cellphone number:</label><br>
             <input type="text" id="Reason" name="Reason" required><br>
 
             <label for="Type">Type:</label><br>
             <select id="Type" name="Type" required>
-                <option value="Admin">Admin</option>
-                <option value="Fund-Manager">Fund-Manager</option>
                 <option value="Applicant">Applicant</option>
+                <option value="Fund-Manager">Fund-Manager</option>
+                <option value="Admin">Admin</option>  
             </select><br>
-
         </fieldset>
 
         <fieldset>
@@ -45,9 +126,15 @@
 
             <label for="Province">Province:</label><br>
             <select id="Province" name="Province">
+                <option value="Northen-Cape">Northen Cape</option>
+                <option value="KZN">KwaZulu-Natal</option>
                 <option value="Gauteng">Gauteng</option>
-                <option value="Western-Cape">Western</option>
+                <option value="Western-Cape">Western Cape</option>
                 <option value="Limpopo">Limpopo</option>
+                <option value="Free-State">Free-State</option>
+                <option value="Eastern-Cape">Eastern Cape</option>
+                <option value="Mpumalanga">Mpumalanga</option>
+                <option value="North-west">North West</option>
                 <option value="other">Other</option>
             </select><br>
 
@@ -55,128 +142,37 @@
             <select id="Gender" name="Gender">
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
-                <option value="other">Other</option>
+                <option value="other">Rather not say</option>
             </select><br>
 
-            <label for="Employed">Employed:</label><br>
+            <label for="Employed">Are you employed?:</label><br>
             <select id="Employed" name="Employed">
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select><br>
 
-            <label for="Confirm">Confirmation Email:</label>
+            <label for="Employed">Studying?:</label><br>
+            <select id="Employed" name="Employed">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br>
+            <label for="Employed">Married?:</label><br>
+            <select id="Employed" name="Employed">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br>
+            
+
+            <label for="Confirm">Confrimation Email:</label>
             <input type="checkbox" id="ConfirmEmail" name="ConfirmEmail"><br>
         </fieldset>
-        <p id="response"></p>
-        <button type="button" id="btn-submit-signup">Sign Up</button>
-        
+        <button type="button" id="btn-submit-signup">SignUp</button>
     </form>
-    
 </main>
 
 <footer>
-    <p>&copy; 2024 Sign Up For LoyalFunding</p>
+    <p>&copy; 2024 Funding requests management</p>
 </footer>
-<style>
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: 'Arial', sans-serif;
-        background-color: #f8f9fa;
-        line-height: 1.6;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-    }
-
-    header, main, footer {
-        width: 100%; 
-        max-width: 600px; 
-    }
-
-    header {
-        background: #007bff;
-        color: #ffffff;
-        padding: 20px 0;
-        text-align: center;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-    }
-
-    h1, h2 {
-        text-align: center; 
-    }
-
-    form {
-        background: white;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        margin: 20px 0; 
-    }
-
-    fieldset {
-        border: 1px solid #ccc;
-        padding: 10px;
-        margin-bottom: 20px;
-    }
-
-    legend {
-        padding: 0 10px;
-        color: #007bff;
-    }
-
-    label {
-        display: block;
-        margin-bottom: 10px;
-        color: #495057;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="date"],
-    select,
-    textarea, 
-    input[type="checkbox"] {
-        width: 100%; 
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ced4da;
-        border-radius: 4px;
-        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
-    }
-
-    button {
-        display: block;
-        width: auto; 
-        padding: 10px 20px; 
-        margin: 0 auto; 
-        border: none;
-        background-color: #007bff;
-        color: white;
-        cursor: pointer;
-        border-radius: 4px;
-        transition: background-color 0.3s;
-    }
-
-    button:hover {
-        background-color: #0056b3;
-    }
-
-    footer {
-        text-align: center;
-        padding: 10px;
-        background-color: #343a40;
-        color: #ffffff;
-        width: 100%; 
-        max-width: 600px; 
-    }
-</style>
 </body>
 </html>

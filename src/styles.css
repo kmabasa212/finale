@@ -1,0 +1,131 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color:white; /* Update background color */
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+
+
+main {
+  padding: 40px 0;
+}
+
+#main-text h2 {
+  padding: 0;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin: 0;
+  font-size: 150px;
+  color: orange; /* Update text color */
+}
+
+p {
+  font-size: large;
+  font-weight: 500;
+  line-height: 30px;
+  color: orange; /* Update text color */
+}
+
+h2 {
+  padding-left: 10px;
+  font-size: 40px;
+  color: orange; /* Update text color */
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+nav {
+  padding: 0 30px;
+}
+
+nav a {
+  padding: 10px 0;
+  text-shadow: 1px 1px;
+  color: orange; /* Update text color */
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-shadow: 1px 1px;
+  color: white;
+  font-weight: 500;
+}
+
+#header {
+  width: 100%;
+  height: 14%;
+  background-color: red;
+  color: bisque;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  color: orange; /* Update text color */
+}
+
+li {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  flex-direction: column; /* Change to column layout */
+  align-items: center; /* Center items */
+  width: 80%;
+  padding: 10px 50px;
+}
+
+#login-article button {
+  color: white;
+  width: 200px; /* Adjust button width */
+  height: 50px; /* Adjust button height */
+  background-color: orange; /* Update button color */
+  justify-content: center;
+  padding: 10px 20px; /* Update padding */
+  border-radius: 25px; /* Make edges circular */
+  margin-bottom: 10px; /* Add margin between buttons */
+  transition: background-color 0.3s ease;
+}
+
+#login-article button:hover {
+  background-color: darkorange; /* Update hover color */
+  color: black;
+}
+
+#register-link {
+  color: orange; /* Update text color */
+}
+
+#register-link:hover {
+  color: whitesmoke;
+}
+
+footer {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: red;
+  color: orange; /* Update text color */
+  font-weight: 300;
+}
