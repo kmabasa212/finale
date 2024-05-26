@@ -17,8 +17,13 @@
         <form id="submit-form">
             <label for="opportunity">Funding Opportunity:</label>
             <select id="opportunity" name="opportunity" required>
-                <!-- Options will be populated dynamically -->
+                <option value="scholarship">Scholarship</option>
+                <option value="grant">Grant</option>
+                <option value="fellowship">Fellowship</option>
+                <option value="award">Award</option>
+                <option value="internship">Internship</option>
             </select>
+            
             
             <label for="applicant-name">Name:</label>
             <input type="text" id="applicant-name" name="applicant-name" required>
