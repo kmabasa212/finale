@@ -47,14 +47,14 @@ function registerUser(){
         const user = result.user;
         if(admin){
               console.log('Hello admin');
-//window.location.href ='https://github.com/kmabasa212/sprint/src/admin.html';
-window.location.href ='https://kmabasa212.github.io/sprint/src/admin.html'
+//window.location.href ='https://github.com/kmabasa212/finale/src/admin.html';
+window.location.href ='https://kmabasa212.github.io/finale/src/admin.html'
         }else if(fundManager){
               console.log('Hello FundManager');
-              window.location.href ='https://kmabasa212.github.io/sprint/src/fundmanager.html';
+              window.location.href ='https://kmabasa212.github.io/finale/src/fundmanager.html';
         }else{
               console.log('Hello Applicant');
-              window.location.href ='https://kmabasa212.github.io/sprint/src/applicant.html';
+              window.location.href ='https://kmabasa212.github.io/finale/src/applicant.html';
         }
         
     }).catch((error) => {

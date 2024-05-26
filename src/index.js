@@ -28,7 +28,7 @@ const user = auth.currentUser;
 
 btn_register.addEventListener('click',()=>{
     //After pressing the register button, user is sent to register page
-    window.location.href = 'https://kmabasa212.github.io/sprint/src/register.html';
+    window.location.href = 'https://kmabasa212.github.io/finale/src/register.html';
 });
 
 btn_applicant_login.addEventListener('click',()=>{
@@ -59,11 +59,11 @@ function signInUser(){
         const user = result.user;
         //Then take the user to their desired home page
         if(admin){
-            window.location.href ='https://kmabasa212.github.io/sprint/src/admin.html';
+            window.location.href ='https://kmabasa212.github.io/finale/src/admin.html';
         }else if(fundManger){
-            window.location.href ='https://kmabasa212.github.io/sprint/src/fundmanager.html';
+            window.location.href ='https://kmabasa212.github.io/finale/src/fundmanager.html';
         }else{
-            window.location.href ='https://kmabasa212.github.io/sprint/src/applicant.html';
+            window.location.href ='https://kmabasa212.github.io/finale/src/applicant.html';
         }
         
     }).catch((error) => {
