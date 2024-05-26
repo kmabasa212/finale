@@ -114,7 +114,8 @@ article {
 }
 
 #register-link {
-  color: orange; /* Update text color */
+  color: purple; /* Update text color */
+  text-decoration: underline;
 }
 
 #register-link:hover {
