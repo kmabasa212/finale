@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Funding Opportunities</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <header>
+        <h1>Create Funding Opportunities</h1>
+        <nav>
+            <a href="fundmanager.html">Home</a>
+        </nav>
+    </header>
+    <main>
+        <form id="create-form">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+            
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="educational">Educational</option>
+                <option value="business">Business</option>
+                <option value="events">Events</option>
+            </select>
+            
+            <label for="deadline">Application Deadline:</label>
+            <input type="date" id="deadline" name="deadline" required>
+            
+            <label for="eligibility">Eligibility Criteria:</label>
+            <textarea id="eligibility" name="eligibility" required></textarea>
+            
+            <label for="amount">Funding Amount:</label>
+            <input type="number" id="amount" name="amount" required>
+            
+            <label for="documents">Required Documents:</label>
+            <textarea id="documents" name="documents" required></textarea>
+            
+            <label for="video">Video URL:</label>
+            <input type="url" id="video" name="video">
+            
+            <label for="poster">Poster Image:</label>
+            <input type="file" id="poster" name="poster" accept="image/*">
+            
+            <button type="submit">Create</button>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

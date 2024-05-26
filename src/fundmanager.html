@@ -4,72 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fund Manager Dashboard</title>
-    <link rel= "stylesheet" href="style.css">
+    <link rel="stylesheet" href="style4.css">
 </head>
 <body>
-    
     <header>
-        <header> 
-            
-            <h1>Dashboard</h1>
-        </header>
-        
+        <h1>Fund Manager Dashboard</h1>
     </header>
-
-    
-    <section id="manage-funding">
-        <h2>Manage Funding Opportunities</h2>
-        <button onclick="showForm()">Add New Funding Opportunity</button>
-        <div id="funding-form" style="display:none;">
-            <form action="/add-funding" method="post">
-                <label for="fundingTitle">Title:</label>
-                <input type="text" id="fundingTitle" name="fundingTitle" required>
-                <br>
-                <label for="fundingDescription">Description:</label>
-                <textarea id="fundingDescription" name="fundingDescription" required></textarea>
-                <br>
-                <label for="fundingAmount">Amount:</label>
-                <input type="number" id="fundingAmount" name="fundingAmount" required>
-                <br>
-                <button type="submit">Submit New Opportunity</button>
-            </form>
+    <main>
+        <div class="option" onclick="navigateTo('create.html')">
+            Create Funding Opportunities
         </div>
-        <div id="funding-opportunities">
-            
+        <div class="option" onclick="navigateTo('advertise.html')">
+            Advertise Funding Opportunities
         </div>
-    </section>
-
-    
-    <section id="review-applications">
-        <h2>Review Applications</h2>
-        <div id="applications-list">
-            
+        
+        <div class="option" onclick="navigateTo('applications.html')">
+            Manage Applications
         </div>
-    </section>
-
-    
-    <section id="budget-reports">
-        <h2>Budget and Reporting</h2>
-        <div id="budget-overview">
-            
-        </div>
-        <button onclick="exportReports()">Export Reports</button>
-    </section>
-
-    
-    <footer>
-        &copy; 2024 Funding requests management
-    </footer>
-
-    
-    <script>
-        function showForm() {
-            document.getElementById('funding-form').style.display = 'block';
-        }
-
-        function exportReports() {
-            
-        }
-    </script>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
