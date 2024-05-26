@@ -3,60 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Applicant Dashboard</title>
-    <link rel= "stylesheet" href="style.css">
+    <title>Submit Funding Application</title>
+    <link rel="stylesheet" href="style4.css">
 </head>
 <body>
-    
     <header>
-        <h1>Dashboard</h1>
+        <h1>Submit Funding Application</h1>
+        <nav>
+            <a href="main.html">Home</a>
+        </nav>
     </header>
-
-    
-    <section id="funding-opportunities">
-        <h2>Current Funding Opportunities</h2>
-        <div id="opportunities-list">
-            
-        </div>
-    </section>
-
-    
-    <section id="submit-application">
-        <h2>Submit a New Application</h2>
-        <form action="/submit-application" method="post" enctype="multipart/form-data">
-            <label for="fundingId">Funding Opportunities📃:</label>
-            <select name="fundingId" id="fundingId">
-                
+    <main>
+        <form id="submit-form">
+            <label for="opportunity">Funding Opportunity:</label>
+            <select id="opportunity" name="opportunity" required>
+                <!-- Options will be populated dynamically -->
             </select>
-            <br>
-            <label for="supportingDocuments">certified copy of ID:</label>
-            <input type="file" id="supportingDocuments" name="supportingDocuments" multiple required>
-            <br>
-            <label for="supportingDocuments">Academic Transcript:</label>
-            <input type="file" id="supportingDocuments" name="supportingDocuments" multiple required>
-            <br>
-            <label for="supportingDocuments">Letter of motivation:</label>
-            <input type="file" id="supportingDocuments" name="supportingDocuments" multiple required>
-            <br>
-            <label for="applicationDetails">Details of application:</label>
-            <textarea id="applicationDetails" name="applicationDetails" required></textarea>
-            <br>
             
-            <button type="submit">Submit👌</button>
+            <label for="applicant-name">Name:</label>
+            <input type="text" id="applicant-name" name="applicant-name" required>
+            
+            <label for="applicant-email">Email:</label>
+            <input type="email" id="applicant-email" name="applicant-email" required>
+            
+            <label for="application-documents">Application Documents:</label>
+            <input type="file" id="application-documents" name="application-documents" multiple required>
+            
+            <button type="submit">Submit</button>
         </form>
-    </section>
-
-    
-    <section id="application-status">
-        <h2>Status 👩‍💻</h2>
-        <div id="status-list">
-            
-        </div>
-    </section>
-
-    
-    <footer>
-        &copy; 2024 Funding requests management 
-       </footer>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
