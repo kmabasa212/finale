@@ -250,10 +250,10 @@ async function registerUser(admin, fundManager, applicant, email, name, pTag){
         setToken(user.accessToken);
         if(admin && (await addUser(user.email, "Admin", true, userToken,name)) ){
             sendMail(email);
-            window.location.href ='https://ambitious-glacier-0cd46151e.5.azurestaticapps.net/AdminUpdate.html';
+            window.location.href ='https://mango-rock-04251f303.5.azurestaticapps.net/AdminUpdate.html';
         }else if(fundManager && (await addUser(user.email, "Fund Manager", true, userToken, name)) ){
             sendMail(email);
-            window.location.href ='https://ambitious-glacier-0cd46151e.5.azurestaticapps.net/fundmanager.html';
+            window.location.href ='https://mango-rock-04251f303.5.azurestaticapps.net/fundmanager.html';
         }else if(applicant && (await addUser(user.email, "Applicant", true, userToken, name)) ){
             sendMail(email);
             window.location.href ='https://mango-rock-04251f303.5.azurestaticapps.net/applicant.html';
