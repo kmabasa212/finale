@@ -3,39 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submit Funding Application</title>
+    <title>Applicant Dashboard</title>
     <link rel="stylesheet" href="style4.css">
 </head>
 <body>
     <header>
-        <h1>Submit Funding Application</h1>
-        <nav>
-            <a href="main.html">Home</a>
-        </nav>
+        <h1>Applicant Dashboard</h1>
     </header>
     <main>
-        <form id="submit-form">
-            <label for="opportunity">Funding Opportunity:</label>
-            <select id="opportunity" name="opportunity" required>
-                <option value="scholarship">Scholarship</option>
-                <option value="grant">Grant</option>
-                <option value="fellowship">Fellowship</option>
-                <option value="award">Award</option>
-                <option value="internship">Internship</option>
-            </select>
-            
-            
-            <label for="applicant-name">Name:</label>
-            <input type="text" id="applicant-name" name="applicant-name" required>
-            
-            <label for="applicant-email">Email:</label>
-            <input type="email" id="applicant-email" name="applicant-email" required>
-            
-            <label for="application-documents">Application Documents:</label>
-            <input type="file" id="application-documents" name="application-documents" multiple required>
-            
-            <button type="submit">Submit</button>
-        </form>
+        <div class="option" onclick="navigateTo('advertise_applicant.html')">
+            Funding Opportunities
+        </div>
+        <div class="option" onclick="navigateTo('submit.html')">
+            Submit Funding Opportunities
+        </div>
+        <div class="option" onclick="navigateTo('track.html')">
+            Track Status
+        </div>
     </main>
     <script src="script.js"></script>
 </body>
