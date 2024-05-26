@@ -30,8 +30,7 @@ document.getElementById('create-form')?.addEventListener('submit', function(even
     const eligibility = formData.get('eligibility');
     const amount = formData.get('amount');
     const documents =formData.get('documents');
-    const video = formData.get('video');
-    const posterFile = formData.get('poster');
+    
 
     // Create new funding opportunity object
     const newOpportunity = {
@@ -42,8 +41,7 @@ document.getElementById('create-form')?.addEventListener('submit', function(even
         eligibility,
         amount,
         documents,
-        video,
-        posterFile: posterFile ? URL.createObjectURL(posterFile) : null // Convert uploaded file to URL
+       
     };
 
     // Add new opportunity to fundingOpportunities array
@@ -88,8 +86,7 @@ function populateOpportunityList() {
                 <p>Eligibility Criteria: ${opportunity.eligibility}</p>
                 <p>Funding Amount: ${opportunity.amount}</p>
                 <p>Required Documents: ${opportunity.documents}</p>
-                ${opportunity.posterFile ? `<p>Poster:  <img src="${opportunity.posterFile}" alt="Poster Image">` : ''}
-                ${opportunity.video ? `<p>Video: <a href="${opportunity.video}" target="_blank">Watch Video</a></p>` : ''}
+               
                 <button onclick="deleteOpportunity(${index})">Delete</button>
             `;
             opportunityList.appendChild(opportunityDiv);
