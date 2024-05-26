@@ -1,7 +1,13 @@
 // Import the functions you need from the SDKs you need
-import { signInUser } from "../src/users.js";
-import { auth } from "../src/init.js";
+import { signInUser } from "../modules/users.js";
+import { auth } from "../modules/init.js";
 
+
+for (let i = 0; i < localStorage.length; i++) {
+    let key = localStorage.key(i);
+    let value = localStorage.getItem(key);
+    console.log(`${key}: ${value}`);
+}
 
 //Below we we initialise any variable we might need for our website
 var btn_register = document.getElementById('register-link');
@@ -27,5 +33,5 @@ btn_login.addEventListener('click',()=>{
 
 //FUNCTION: Registers user using their google email
 function signIn(){
-    signInUser();
+    signInUser(document.getElementById('response'));
 }
